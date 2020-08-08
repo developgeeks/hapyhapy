@@ -1,11 +1,12 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    $projects = App\Project::all()->where('status', '==', 'ACTIVE');
+    return view('welcome', compact('projects'));
 });
 
-Route::get('home', 'HomeController@index');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
+    Route::get('/', 'AdminController@index')->name('dashboard');
     Route::get('projects', 'ProjectsController@index')->name('admin.projects.index');
 });
 
