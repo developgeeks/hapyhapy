@@ -123,7 +123,8 @@
                 </a>
                 <div class="p-4 property-body">
                   <h2 class="property-title"><a href="property-details.html">{{ $project->name }}</a></h2>
-                  <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+                  <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>{{ $project->address }}</span>
+                  <!--
                   <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
                   <ul class="property-specs-wrap mb-3 mb-lg-0">
                     <li>
@@ -141,7 +142,7 @@
                       <span class="property-specs-number">7,000</span>
                       
                     </li>
-                  </ul>
+                  </ul>-->
                 </div>
               </div>
             </div>
@@ -310,7 +311,6 @@
                   <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
                 </p>
               </div>
-
             </div>
           </div>
         </div>

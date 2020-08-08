@@ -20,6 +20,9 @@
                         <th>Name</th>
                         <th>Description</th>
                         <th>Address</th>
+                        <th>Community</th>
+                        <th>City</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -29,6 +32,9 @@
                             <td>{{ $project->name }}</td>
                             <td>{{ $project->description }}</td>
                             <td>{{ $project->address }}</td>
+                            <td>{{ $project->community }}</td>
+                            <td>{{ $project->city->city }}</td>
+                            <td>{{ $project->status }}</td>
                             <td>
                                 <a href="#" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>    
                                 <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>                            

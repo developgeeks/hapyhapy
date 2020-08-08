@@ -15,11 +15,12 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 10);
-            $table->string('description', 100);
+            $table->string('name', 30);
+            $table->string('description', 200);
             $table->string('address', 50);
             $table->string('community', 50);
-            $table->string('urlImage', 50);
+            $table->string('url_Image', 50);
+            $table->unsignedInteger('city_id');
             $table->enum('status', ['ACTIVE', 'INACTIVE']);
             $table->timestamps();
         });
